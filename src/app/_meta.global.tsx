@@ -1,4 +1,8 @@
 export default {
+  generateurs: {
+    title: "Générateurs",
+    type: "page",
+  },
   "a-propos": {
     title: "À propos",
     type: "page",
