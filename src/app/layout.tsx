@@ -42,19 +42,6 @@ export const metadata: Metadata = {
 const docsRepositoryBase =
   "https://github.com/em-squared/tranchons-et-traquons";
 
-const banner = (
-  <Banner storageKey="looking-for-job">
-    <Link
-      href="https://emsquared.me"
-      target="_blank"
-      rel="noreferrer"
-      className="x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]"
-    >
-      EMSQUARED.ME
-    </Link>{" "}
-    est à l'écoute d'opportunités !
-  </Banner>
-);
 const navbar = (
   <Navbar logo={<b>Tranchons & Traquons</b>} projectLink={docsRepositoryBase} />
 );
@@ -76,7 +63,15 @@ const footer = (
         <span className="font-semibold">
           <em>Tranchons & Traquons</em>
         </span>{" "}
-        est un jeu de Kobayashi
+        est un jeu de{" "}
+        <Link
+          href="https://livresdelours.blogspot.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]"
+        >
+          Kobayashi
+        </Link>
       </div>
     </div>
   </Footer>
@@ -92,7 +87,6 @@ export default async function RootLayout({ children }) {
       </Head>
       <body>
         <Layout
-          banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase={docsRepositoryBase}
